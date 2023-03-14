@@ -1,0 +1,16 @@
+import math
+a = float(input("Podaj współczynnik a: "))
+b = float(input("Podaj współczynnik b: "))
+c = float(input("Podaj współczynnik c: "))
+delta = b**2 - 4*a*c
+
+
+if delta < 0:
+    print("Równanie nie ma pierwiastków rzeczywistych.")
+elif delta == 0:
+    x = -b / (2*a)
+    print("Równanie ma jeden pierwiastek: x =", x)
+else:
+    x1 = (-b - math.sqrt(delta)) / (2*a)
+    x2 = (-b + math.sqrt(delta)) / (2*a)
+    print("Równanie ma dwa pierwiastki: x1 =", x1, "i x2 =", x2)
